@@ -248,6 +248,7 @@ int main()
 			if (Rank == 3)
 			{
 				write("No more tasks available at this time");
+				continue;
 			}
 			//If you've completed the first quest then the other quest will be available, hence the if rank 2
 			if (Rank == 2)
@@ -293,7 +294,7 @@ int main()
 
 					}
 
-					write("Oh, your doing this one next. You're supposed to head to the west. Follow the trail to the old king's castle. whoch is in ruins now. Get the stuff from the chest.");
+					write("Oh, your doing this one next. You're supposed to head to the west. Follow the trail to the old king's castle. which is in ruins now. Get the stuff from the chest.");
 					write("You will be rewarded 500 gold pieces and rank 3. Good luck!");
 					system("cls");
 					write(Name + " heads out to the west.");
@@ -443,7 +444,7 @@ int main()
 					write("You loot the chest and found a book");
 					write("The book was big and dusty, looked like it hadn't been used in ages");
 					system("cls");
-					write(Name + " walked back to town with the book to town");
+					write(Name + " walked back to town with the book");
 					write(Name + " got rewarded with 1000 gold pieces and rank 3!");
 					Rank = 3;
 					Balance += 1000;
@@ -507,7 +508,7 @@ int main()
 				Sleep(2000);
 				system("cls");
 				write(Name + " heads to the register");
-				write("Big Fella Steve is still there and he welcoms you back");
+				write("Big Fella Steve is still there and he welcomes you back");
 				write("So you want to do this one?");
 				write("Exit this town through the south gate and from there follow the trail. When you reach Outfall Town you are at the place. I'm sure you can figure it out from there");
 
@@ -661,6 +662,7 @@ int main()
 				write("I took 2 full days to get to Outfall town");
 				write("When you got there you delivered the scroll to the guards they thanked you and you started to head back");
 				Sleep(2000);
+				system("cls");
 				write("When you walked back to the gate a guard started following you");
 				write("He had followed you in the shadows for about an hour now");
 				write("You started to get used to it and let down your guard");
