@@ -43,7 +43,7 @@ struct Shop
 	int Stock;
 };
 
-//A more advanced random number generator
+//A more advanced random number generator, I am going to be honest, I dont't understand this one but it works and I grabbed it from the internet
 int GenerateRandomNumber(int min, int max)
 {
 	std::random_device rd;
@@ -55,10 +55,6 @@ int GenerateRandomNumber(int min, int max)
 
 
 
-void chest()
-{
-
-};
 
 //I don't need to use I or length since I will only write strings with this function
 void write(std::string Text)
@@ -163,7 +159,7 @@ int main()
 	write("Hello boy! I am Big Fella Steve. Are you ready to take on the life as an adventurer?");
 	std::cin >> My_input;
 
-	//This transform is so you can write letters with uppercase and it will still understand that you mean yes.
+	//This transform is so you can write letters with uppercase and it will still understand that you mean yes. I understand it's function I just don't understand the code, I have not written this one myself
 	std::transform(My_input.begin(), My_input.end(), My_input.begin(),
 		[](unsigned char c) { return std::tolower(c); });
 	if (My_input == "yes" || My_input == "hell yeah!")
@@ -252,13 +248,13 @@ int main()
 			{
 				write("No more tasks available at this time");
 			}
-			//If you've completed the first quest then the other quest will only be available, hence the if rank 2
+			//If you've completed the first quest then the other quest will be available, hence the if rank 2
 			if (Rank == 2)
 			{
 				while (true)
 				{
 
-
+					//This is the start of the second quest
 					write("You walk up to the board once again and there seems to be only 1 available task");
 					write("1. Loot the chest in the ruins");
 					Sleep(2000);
@@ -304,6 +300,7 @@ int main()
 					write("When " + Name + " arrives at the chest they see that a bigger monster is protecting the chest!");
 					write("The monster comes running at you but it appears to be very slow");
 
+					//This is the third and last battle of the game
 					bool turn = true;
 
 					while (true)
@@ -331,7 +328,7 @@ int main()
 							if (Choice == 1)
 							{
 
-
+								
 								int Random_Number = GenerateRandomNumber(1, 100);
 								if (Random_Number <= 95)
 								{
@@ -429,10 +426,11 @@ int main()
 							if (My_input == "yes")
 							{
 								write(Name + " drank a health potion and is now at full hp");
+								Inventory_HPotion = 0;
 							}
 							else
 							{
-								break;
+								write("You did not drink a potion");
 							}
 					}
 				
@@ -449,7 +447,7 @@ int main()
 					break;
 				}
 			}
-
+			//This is actually where the gamebe
 			else
 			{
 				write("You walk to the board with all the task posters on.");
