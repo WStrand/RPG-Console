@@ -16,7 +16,7 @@ int Health_Guard = 100;
 int Total_Damage = 100;
 int Inventory_HPotion = 1;
 
-
+//A struct for the attacks so we can list them in a vector
 struct Attack
 {
 	Attack(std::string name, int damage)
@@ -29,6 +29,7 @@ struct Attack
 	int Damage;
 
 };
+//A struct for the shop si we can list the ites in a vector
 struct Shop
 {
 	Shop(std::string name, int price, int stock)
@@ -328,7 +329,7 @@ int main()
 							if (Choice == 1)
 							{
 
-								
+								//My turn and I have a choice to use attack 1 or attack 2. Attack 2 has a bigger chance miss then attack 1.
 								int Random_Number = GenerateRandomNumber(1, 100);
 								if (Random_Number <= 95)
 								{
@@ -380,6 +381,7 @@ int main()
 						}
 						if (turn == false)
 						{
+							//Monsters turn and the monster has a big chance to miss but he hits hard.
 							int Random_Number = GenerateRandomNumber(1, 100);
 							if (Random_Number >= 30)
 							{
@@ -419,6 +421,7 @@ int main()
 					write("That sure was a though fight");
 					if (Inventory_HPotion >= 1)
 					{
+						//The game asks if you want to use a health potion or not
 						write("Do you want to use a health potion?");
 						std::cin >> My_input;
 							std::transform(My_input.begin(), My_input.end(), My_input.begin(),
@@ -436,7 +439,7 @@ int main()
 				
 					
 					
-				
+					//The game prints out that you looted the chest
 					write("You loot the chest and found a book");
 					write("The book was big and dusty, looked like it hadn't been used in ages");
 					system("cls");
